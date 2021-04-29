@@ -1,11 +1,11 @@
 
-name: ci-nodejs-workflow
+name: ci-nodejs-sonarcloud
 on: 
   pull_request:
     branches:
       - develop
 jobs:
-  checkout-application:
+  run-ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -13,5 +13,4 @@ jobs:
         with:
           node-version: 14
       - run: npm install
-      - run: npm run test
-      - run: npm start
+      - run: npm run test -coverage=coverage.out
