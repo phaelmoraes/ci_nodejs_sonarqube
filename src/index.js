@@ -1,5 +1,10 @@
-const sum = require('./sum');
+const sum = require('./sum')
 
-const result = sum(2, 3);
+const sub = require('./sub')
 
-console.log(`A soma de 2 e 3 é ${result}`);
+const resultSum = sum(2, 3);
+const resultSub = sub(5, 2);
+
+console.log(`A soma de 2 e 3 é ${resultSum}`);
+
+console.log(`A diferenca de 5 e 2 é ${resultSub}`);
